@@ -687,7 +687,7 @@ elif current_page == PAGE_SEGMENTATION:
         hide_index=True
     )
 
-    with st.expander("📖 Segment Definitions & Plain-English Interpretations"):
+    with st.expander("📖 Segment Definitions &  Interpretations"):
         st.markdown(
             """
             - **Best Customers (814 customers | £1,921.83 avg spend | 45.9 days recency):** High-frequency, high-value repeat shoppers accounting for **56.8%** of cumulative revenue. Demonstrates a strong **54.7%** actual 30-day repeat purchase rate. Top priority for VIP retention.
