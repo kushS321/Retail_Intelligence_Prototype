@@ -1222,45 +1222,37 @@ elif current_page == PAGE_EVALUATION:
     st.divider()
 
     # C. Model Interpretation & Selection Rationale
-    st.markdown("### 🧠 Metric Interpretations & Model Selection Rationale")
+    st.markdown("### 🧠 Metric Interpretation & Model Selection")
 
     interp_col1, interp_col2 = st.columns(2, gap="large")
 
     with interp_col1:
         with st.container(border=True):
-            st.markdown("#### 🎯 Metric Explanations in Simple Terms")
+            st.markdown("#### 🎯 Understanding the Metrics")
             st.markdown(
                 """
-                - **Accuracy (70.27% - Logistic Regression):** The overall proportion of correct classifications (both buyers and non-buyers). While useful, high accuracy alone can mask class imbalance.
-                - **Precision (45.84% - Logistic Regression):** When the model predicts that a customer *will purchase*, what percentage actually purchased. Minimizes budget wasted on false alarms.
-                - **Recall (72.81% - Decision Tree):** Out of all customers who *actually purchased*, what percentage did the model successfully identify. Captures the maximum volume of real buyers.
-                - **F1 Score (53.36% - Logistic Regression):** The harmonic mean of precision and recall. Provides the most balanced metric for imbalanced retail purchase prediction.
+                - **Accuracy — 70.27% - Logistic Regression** Overall percentage of correct predictions. Accuracy alone may hide poor performance on a less common class.
+                - **Precision (45.84% - Logistic Regression):** Of customers predicted to purchase, the percentage who actually purchased.
+                - **Recall (72.81% - Decision Tree):** Of actual purchasers, the percentage correctly identified by the model.
+                - **F1 Score (53.36% - Logistic Regression):** The harmonic mean of precision and recall. Logistic Regression achieved the highest F1-score in your comparison.
                 """
             )
 
     with interp_col2:
         with st.container(border=True):
-            st.markdown("#### ⚖️ Why Logistic Regression was Selected")
+            st.markdown("####⚖️ Why Logistic Regression?")
             st.markdown(
                 """
                 In our time-based temporal evaluation:
-                1. **Highest F1 Score (53.36%):** Logistic Regression strikes the most effective practical compromise between finding buyers and avoiding costly false alarms.
-                2. **Higher Precision (45.84% vs 41.31%):** In retail marketing campaigns, marketing to non-buyers incurs marketing and discount costs. Higher precision prevents budget waste.
-                3. **Trade-off with Decision Tree (Recall 72.81% vs 63.83%):** Decision Tree achieves superior recall by adopting a more aggressive trigger, but pays a steep penalty in false positives (precision drops to 41.31%).
-                4. **Model Interpretability:** Logistic Regression coefficients and calibrated probabilities allow transparent risk-scoring in commercial CRM environments.
+                1. **1. Highest F1-score** 53.36%, the best balance of precision and recall among the tested models.
+                2. **2. Highest accuracy and precision:** 70.27% accuracy and 45.84% precision, outperforming the other two models on these metrics.
+                3. **3. Recall trade-off: ** Decision Tree achieved higher recall (72.81% vs. 63.83%), but had lower precision and F1-score.
+                4. **4. Interpretability** Logistic Regression is generally easier to interpret through its coefficients. Probability calibration must be verified separately.
                 """
             )
 
     st.write("")
 
-    # D. Evaluation Caveat
-    st.info(
-        "⚠️ **Temporal Evaluation Methodology & Caveats:**\n\n"
-        "1. **Time-Based Split Design:** These evaluation metrics were computed using a rigorous time-based split rather than random k-fold cross-validation. "
-        "Transactions up to **September 1, 2010** formed the feature engineering window, and purchases occurring in the subsequent **30 days** served as ground truth. "
-        "This strictly prevents temporal data leakage.\n"
-        "2. **Production Drift:** These recorded metrics describe historical holdout performance and cannot guarantee identical future accuracy under evolving macroeconomic or seasonal conditions."
-    )
 
 
 # ============================================================
