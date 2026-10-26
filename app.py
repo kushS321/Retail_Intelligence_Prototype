@@ -442,19 +442,6 @@ if current_page == PAGE_HOME:
     st.write("")
     st.divider()
 
-    # System Architecture Summary
-    st.markdown("#### 🏗️ End-to-End Machine Learning Workflow")
-    workflow_col1, workflow_col2, workflow_col3, workflow_col4, workflow_col5 = st.columns(5)
-    with workflow_col1:
-        st.markdown("**1. Data Cleaning**\nClean retail transactions, remove cancellations and invalid records, and retain valid customer IDs.")
-    with workflow_col2:
-        st.markdown("**2. RFM Analysis**\nRecency, Frequency, Monetary, Average Order Value, and Total Quantity calculated.")
-    with workflow_col3:
-        st.markdown("**3. Customer Segmentation**\nApply K-Means clustering to RFM features and profile customer groups.")
-    with workflow_col4:
-        st.markdown("**4. Temporal Model Evaluation**\nTemporal training window (Sep 1, 2010 snapshot) evaluating 30-day forward purchases.")
-    with workflow_col5:
-        st.markdown("**5. Decision Support**\nInteractive Streamlit decision interface connecting predictions to commercial actions.")
 
 
 # ============================================================
