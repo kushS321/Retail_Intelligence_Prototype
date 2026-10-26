@@ -827,7 +827,7 @@ elif current_page == PAGE_PREDICTION:
     # )
 
     # Customer Preset Selection for convenience during demonstration
-    st.markdown("#### ⚡ Quick Customer Persona Presets")
+    st.markdown("####  Quick Customer Persona Presets")
     st.caption("Select a persona preset to populate realistic customer inputs or enter custom figures below:")
 
     preset_col1, preset_col2, preset_col3, preset_col4 = st.columns(4)
@@ -919,12 +919,12 @@ elif current_page == PAGE_PREDICTION:
                 help="Aggregate quantity of items purchased across all line items."
             )
 
-            st.caption(
-                "ℹ️ **Feature Definition Note:** `Average_Order_Value` in the trained model pipeline reflects the mean "
-                "transaction-line item expenditure (spend per item line) as engineered during dataset cleaning."
-            )
+            # st.caption(
+            #     "ℹ️ **Feature Definition Note:** `Average_Order_Value` in the trained model pipeline reflects the mean "
+            #     "transaction-line item expenditure (spend per item line) as engineered during dataset cleaning."
+            # )
 
-        predict_clicked = st.button("🔮 Predict 30-Day Purchase Probability", type="primary", width="stretch")
+        predict_clicked = st.button("Predict 30-Day Purchase Probability", type="primary", width="stretch")
 
     # B. Prediction Execution
     if predict_clicked:
