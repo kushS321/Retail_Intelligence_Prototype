@@ -361,8 +361,7 @@ if current_page == PAGE_HOME:
             st.caption("Future Prediction")
 
     st.write("")
-    st.markdown("### 🧭 Core System Capabilities")
-    st.caption("Select any feature module below to explore the working machine learning workflow:")
+    st.markdown("### Core System Capabilities")
 
     # Four Clickable Feature Cards (2x2 Grid)
     row1_col1, row1_col2 = st.columns(2, gap="medium")
@@ -372,10 +371,9 @@ if current_page == PAGE_HOME:
             st.markdown("#### 👥 1. Customer Segmentation")
             st.markdown(
                 "**Discover meaningful customer groups using RFM analysis.**\n\n"
-                "Explore behavioral segments including *Best Customers*, *Loyal Customers*, and *At-Risk Valuable Customers*. "
-                "Examine customer count distributions, total revenue contribution, and individual customer profiles with export capabilities."
+                "Analyze customer purchasing history to identify valuable, loyal, recent, and at-risk customers. Explore segment distributions, spending patterns, and customer profiles to support targeted marketing decisions."
             )
-            st.markdown('<span class="badge-blue">RFM Clustering</span> &nbsp; <span class="badge-green">6 Distinct Segments</span>', unsafe_allow_html=True)
+            st.markdown('<span class="badge-blue">RFM Analysis</span> &nbsp; <span class="badge-green">Customer Insights</span>', unsafe_allow_html=True)
             st.write("")
             st.button(
                 "Explore Customer Segments →",
