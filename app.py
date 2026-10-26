@@ -1246,7 +1246,7 @@ elif current_page == PAGE_EVALUATION:
                 In our time-based temporal evaluation:
                 1. **1. Highest F1-score** 53.36%, the best balance of precision and recall among the tested models.
                 2. **2. Highest accuracy and precision:** 70.27% accuracy and 45.84% precision, outperforming the other two models on these metrics.
-                3. **3. Recall trade-off: ** Decision Tree achieved higher recall (72.81% vs. 63.83%), but had lower precision and F1-score.
+                3. **3. Recall trade-off:** Decision Tree achieved higher recall (72.81% vs. 63.83%), but had lower precision and F1-score.
                 4. **4. Interpretability** Logistic Regression is generally easier to interpret through its coefficients. Probability calibration must be verified separately.
                 """
             )
