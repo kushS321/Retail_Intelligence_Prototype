@@ -288,7 +288,7 @@ def navigate_to(page_name: str) -> None:
 
 # Sidebar Navigation
 st.sidebar.markdown("### 🛍️ Retail Intelligence")
-st.sidebar.caption("Machine Learning Decision Support System")
+st.sidebar.caption(" A Decision Support System")
 
 current_page = st.sidebar.radio(
     "Navigation Menu",
@@ -302,15 +302,17 @@ st.sidebar.divider()
 st.sidebar.markdown("#### ⚙️ System Specifications")
 st.sidebar.markdown(
     """
-    - **Prediction Horizon:** 30 Days Future
-    - **Production Model:** Logistic Regression Pipeline
-    - **Snapshot Date:** September 1, 2010
-    - **Evaluated Customers:** 3,175 Profiles
+    - **Prediction Horizon:** Next 30 Days
+    - **Selected Prediction Model:** Logistic Regression
+    - **Evaluation Snapshot:** September 1, 2010
+    - **Total Unique Customers After Cleaning:** 4,140
+    - **Customers in September Evaluation:** 3,175 profiles (as reported by the existing evaluation output)
     - **Feature Engineering:** RFM + Basket Features
+    - **Prediction Output:** Purchase probability and predicted class (Purchase / No Purchase)
     """
 )
 st.sidebar.divider()
-st.sidebar.caption("Retail ML Prototype • Academic Dissertation v2.0")
+st.sidebar.caption("Retail Intelligence | ML Project")
 
 
 # ============================================================
