@@ -322,6 +322,45 @@ if current_page == PAGE_HOME:
 
     # Hero Title Banner
     st.title("🛍️ Retail Intelligence System")
+
+    # # Business Question Banner
+
+    st.markdown(
+    """
+    <div style="
+        background-color: #F5F7FB;
+        border-left: 5px solid #14B8A6;
+        padding: 18px 22px;
+        margin: 12px 0 22px 0;
+        border-radius: 6px;
+    ">
+        <p style="
+            color: #14A89E;
+            font-size: 17px;
+            font-weight: 600;
+            margin: 0 0 14px 0;
+        ">
+            Every business has one key question:
+        </p>
+        <p style="
+            color: #172338;
+            font-size: 25px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin: 0;
+        ">
+            Who are our customers — and who is more likely
+            to return and purchase soon?
+        </p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
+    
+
+    
     st.markdown(
         "##### **Customer Segmentation & Purchasing Behavior Prediction System**"
     )
