@@ -540,7 +540,7 @@ elif current_page == PAGE_SEGMENTATION:
                 go.Pie(
                     labels=seg_summary_counts["Customer_Segment"],
                     values=seg_summary_counts["Customer_Count"],
-                    hole=0.48,
+                    hole=0.30,
                     marker=dict(colors=donut_colors),
                     textinfo="label+percent",
                     hovertemplate="<b>%{label}</b><br>Customers: %{value:,}<br>Share: %{percent}<extra></extra>"
@@ -548,7 +548,7 @@ elif current_page == PAGE_SEGMENTATION:
             ]
         )
         fig_donut.update_layout(title="Customer Distribution by Segment")
-        st.plotly_chart(apply_chart_theme(fig_donut, height=380), width="stretch")
+        st.plotly_chart(apply_chart_theme(fig_donut, height=300), width="stretch")
 
     with col_chart2:
         # Bar Chart of Customer Counts
