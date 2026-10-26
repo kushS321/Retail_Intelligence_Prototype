@@ -1027,7 +1027,7 @@ elif current_page == PAGE_PREDICTION:
             # C. Suggested Business Action
             st.write("")
             st.markdown("### 💡 Recommended Business Strategy")
-            st.caption("Strategic decision guidance based on customer RFM status and predicted purchase propensity.")
+            
 
             rec_box_style = (
                 "background-color: #131E32; border: 1px solid #1E293B; border-left: 4px solid #3B82F6; "
@@ -1038,25 +1038,25 @@ elif current_page == PAGE_PREDICTION:
             strategies = []
             if recency > 90:
                 strategies.append(
-                    "**Re-Engagement & Win-Back Campaign:** The customer has not purchased in over 90 days. "
+                    "Re-Engagement & Win-Back Campaign : The customer has not purchased in over 90 days. "
                     "Deploy an automated reactivation sequence featuring a personalized discount, 'We Miss You' incentive, "
                     "or reminders of popular products from categories they previously purchased."
                 )
             if frequency >= 8 and monetary >= 1000:
                 strategies.append(
-                    "**VIP Loyalty Program Invitation:** High cumulative spend (£{:,.0f}) and high frequency ({:d} orders) "
+                    "VIP Loyalty Program Invitation : High cumulative spend (£{:,.0f}) and high frequency ({:d} orders) "
                     "place this customer in the top commercial tier. Provide exclusive early access to new catalog items, dedicated account support, "
                     "and tier-based loyalty perks to safeguard against competitive churn.".format(monetary, frequency)
                 )
             if purchase_prob >= 0.50:
                 strategies.append(
-                    "**High-Propensity Replenishment Offer:** The customer displays strong buying momentum ({:.1%} likelihood). "
+                    "High-Propensity Replenishment Offer : The customer displays strong buying momentum ({:.1%} likelihood). "
                     "Trigger replenishment notifications, recommend complementary cross-sell accessories, or offer free-shipping order-value boosters "
                     "within the next 14 days.".format(purchase_prob)
                 )
             else:
                 strategies.append(
-                    "**Low-Cost Content Nurture & Feedback Survey:** Predicted propensity is under 50% ({:.1%}). "
+                    "Low-Cost Content Nurture & Feedback Survey : Predicted propensity is under 50% ({:.1%}). "
                     "Avoid deep margin-eroding discounts; instead, deliver educational category content, product discovery newsletters, "
                     "or a short customer feedback survey to diagnose drop-off reasons.".format(purchase_prob)
                 )
@@ -1073,10 +1073,6 @@ elif current_page == PAGE_PREDICTION:
                 unsafe_allow_html=True
             )
 
-            st.caption(
-                "⚠️ **Disclaimer:** Strategic recommendations are operational heuristics designed to guide marketing decisions. "
-                "The ML model provides probabilistic classification based on historical training data; it does not guarantee customer outcomes."
-            )
 
         except Exception as e:
             st.error(f"Prediction failed with error: {e}")
