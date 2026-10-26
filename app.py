@@ -592,12 +592,12 @@ elif current_page == PAGE_SEGMENTATION:
                         marker=dict(color=[SEGMENT_COLORS.get(s, "#3B82F6") for s in spend_by_seg["Customer_Segment"]]),
                         text=spend_by_seg["Total_Spend"].map(lambda x: f"£{x:,.0f}"),
                         textposition="outside",
-                        hovertemplate="<b>%{x}</b><br>Total Spend: $%{y:,.2f}<extra></extra>"
+                        hovertemplate="<b>%{x}</b><br>Total Spend: £%{y:,.2f}<extra></extra>"
                     )
                 ]
             )
             fig_spend.update_layout(
-                title="Total Revenue Contribution by Segment ($)",
+                title="Total Revenue Contribution by Segment (£)",
                 xaxis_title="Customer Segment",
                 yaxis_title="Total Spend ()",
                 yaxis=dict(range=[0, spend_by_seg["Total_Spend"].max() * 1.15])
