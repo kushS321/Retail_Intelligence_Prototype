@@ -305,7 +305,6 @@ st.sidebar.markdown(
     - **Prediction Horizon:** Next 30 Days
     - **Selected Prediction Model:** Logistic Regression
     - **Evaluation Snapshot:** September 1, 2010
-    - **Total Unique Customers After Cleaning:** 4,140
     - **Customers in September Evaluation:** 3,175 profiles (as reported by the existing evaluation output)
     - **Feature Engineering:** RFM + Basket Features
     - **Prediction Output:** Purchase probability and predicted class (Purchase / No Purchase)
@@ -517,11 +516,6 @@ elif current_page == PAGE_SEGMENTATION:
             st.metric("Highest-Value Segment", f"{highest_val_name}")
             st.caption(f"£{highest_val_total:,.0f} spend (avg £{highest_val_avg:,.2f})")
 
-    st.info(
-        "📌 **Dataset Scope & Validation Split:** The customer segmentation dataset represents **3,175 customer profiles** "
-        "calculated at the **September 1, 2010** temporal snapshot date. RFM characteristics describe historical behavior prior to "
-        "this snapshot, while the subsequent 30-day window evaluates actual repurchasing activity."
-    )
 
     st.write("")
 
