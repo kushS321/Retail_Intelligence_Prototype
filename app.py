@@ -817,12 +817,12 @@ elif current_page == PAGE_PREDICTION:
     expected_features = ["Recency", "Frequency", "Monetary", "Average_Order_Value", "Total_Quantity"]
 
     st.markdown(
-        """
-        <div style="background-color: rgba(30, 41, 59, 0.4); border: 1px solid #1E293B; border-radius: 8px; padding: 12px 16px; margin-bottom: 20px;">
-            <span style="color: #60A5FA; font-weight: 600;">Active Model Architecture:</span>
-            <span style="color: #94A3B8;"> Scikit-Learn Pipeline (StandardScaler → LogisticRegression). Expected input vector: <code>Recency</code>, <code>Frequency</code>, <code>Monetary</code>, <code>Average_Order_Value</code>, <code>Total_Quantity</code>.</span>
-        </div>
-        """,
+        # """
+        # <div style="background-color: rgba(30, 41, 59, 0.4); border: 1px solid #1E293B; border-radius: 8px; padding: 12px 16px; margin-bottom: 20px;">
+        #     <span style="color: #60A5FA; font-weight: 600;">Active Model Architecture:</span>
+        #     <span style="color: #94A3B8;"> Scikit-Learn Pipeline (StandardScaler → LogisticRegression). Expected input vector: <code>Recency</code>, <code>Frequency</code>, <code>Monetary</code>, <code>Average_Order_Value</code>, <code>Total_Quantity</code>.</span>
+        # </div>
+        # """,
         unsafe_allow_html=True
     )
 
