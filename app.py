@@ -327,9 +327,7 @@ if current_page == PAGE_HOME:
         "##### **Customer Segmentation & Purchasing Behavior Prediction System**"
     )
     st.markdown(
-        "A comprehensive Machine Learning decision-support platform designed to analyze retail customer transactions, "
-        "discover high-value customer clusters through RFM segmentation, predict individual next-30-day purchase propensities, "
-        "and provide data-driven marketing strategies for retail leadership."
+        "Transform retail transaction data into actionable insights with RFM-based customer segmentation, 30-day purchase prediction, and data-driven marketing strategies."
     )
 
     st.write("")
@@ -347,7 +345,7 @@ if current_page == PAGE_HOME:
     with col_kpi1:
         with st.container(border=True):
             st.metric("Total Customers Evaluated", f"{total_customers:,}")
-            st.caption("Holdout time-based snapshot")
+            st.caption("September 2010 snapshot")
     with col_kpi2:
         with st.container(border=True):
             st.metric("Customer Segments", f"{total_segments}")
@@ -356,11 +354,11 @@ if current_page == PAGE_HOME:
         with col_kpi3:
             with st.container(border=True):
                 st.metric("Model Accuracy", "70.27%")
-                st.caption("Logistic Regression (F1: 53.36%)")
+                st.caption("Logistic Regression ")
     with col_kpi4:
         with st.container(border=True):
             st.metric("Purchase Horizon", "30 Days")
-            st.caption("Forward observation window")
+            st.caption("Future Prediction")
 
     st.write("")
     st.markdown("### 🧭 Core System Capabilities")
