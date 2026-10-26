@@ -388,11 +388,10 @@ if current_page == PAGE_HOME:
         with st.container(border=True):
             st.markdown("#### 🛒 2. Purchase Prediction")
             st.markdown(
-                "**Estimate whether a customer is likely to purchase within the next 30 days.**\n\n"
-                "Interactive predictive inference powered by the trained Logistic Regression model pipeline. "
-                "Enter customer metrics or select realistic persona presets to receive real-time purchase probabilities and recommended business interventions."
+                "**Predict customer purchase likelihood over the next 30 days.**\n\n"
+                "Use a trained Logistic Regression model to estimate purchase probability from customer behavior. Enter customer metrics or select a persona to explore predictions and relevant marketing actions."
             )
-            st.markdown('<span class="badge-blue">Trained Scikit-Learn Model</span> &nbsp; <span class="badge-amber">Dynamic Inference</span>', unsafe_allow_html=True)
+            st.markdown('<span class="badge-blue">Logistic Regression</span> &nbsp; <span class="badge-amber">30-Day Forecast</span>', unsafe_allow_html=True)
             st.write("")
             st.button(
                 "Launch Purchase Predictor →",
@@ -409,11 +408,10 @@ if current_page == PAGE_HOME:
         with st.container(border=True):
             st.markdown("#### 📈 3. Model Evaluation")
             st.markdown(
-                "**Compare Logistic Regression, Decision Tree, and Random Forest using actual evaluation results.**\n\n"
-                "Inspect temporal holdout performance across Accuracy, Precision, Recall, and F1 Score. "
-                "Understand why Logistic Regression was selected as the balanced production classifier over high-recall decision trees."
+                "**Compare machine learning models using time-based validation.**\n\n"
+                "Evaluate Logistic Regression, Decision Tree, and Random Forest using Accuracy, Precision, Recall, and F1-score. Understand model trade-offs and why Logistic Regression was selected for the purchase prediction prototype."
             )
-            st.markdown('<span class="badge-blue">Temporal Holdout</span> &nbsp; <span class="badge-green">3 Classifier Benchmarks</span>', unsafe_allow_html=True)
+            st.markdown('<span class="badge-blue">TTemporal Validation</span> &nbsp; <span class="badge-green">3 Models Compared</span>', unsafe_allow_html=True)
             st.write("")
             st.button(
                 "Compare Evaluation Metrics →",
@@ -428,11 +426,10 @@ if current_page == PAGE_HOME:
         with st.container(border=True):
             st.markdown("#### 💡 4. Business Insights")
             st.markdown(
-                "**Understand customer value, purchasing patterns, and actionable marketing strategies.**\n\n"
-                "Evaluate segment-level purchase conversion rates, compare actual vs. predicted buyer volumes, "
-                "and review tailored marketing recommendations to maximize customer retention and spend."
+                "**Turn customer behavior into actionable business insights.**\n\n"
+                "Explore customer value, purchase patterns, and segment-level performance. Use purchasing trends and tailored marketing recommendations to support customer retention, targeted campaigns, and revenue growth."
             )
-            st.markdown('<span class="badge-blue">Strategic Value</span> &nbsp; <span class="badge-emerald">Actionable Playbooks</span>', unsafe_allow_html=True)
+            st.markdown('<span class="badge-blue">Customer Analytics</span> &nbsp; <span class="badge-emerald">Marketing Strategies</span>', unsafe_allow_html=True)
             st.write("")
             st.button(
                 "View Strategic Insights →",
