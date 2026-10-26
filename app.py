@@ -548,7 +548,7 @@ elif current_page == PAGE_SEGMENTATION:
             ]
         )
         fig_donut.update_layout(title="Customer Distribution by Segment")
-        st.plotly_chart(apply_chart_theme(fig_donut, height=300), width="stretch")
+        st.plotly_chart(apply_chart_theme(fig_donut, height=400), width="stretch")
 
     with col_chart2:
         # Bar Chart of Customer Counts
